@@ -1,6 +1,8 @@
 #ifndef INC_STM32F411XX_H_
 #define INC_STM32F411XX_H_
 
+#include<stdint.h>
+
 #define FLASH_BASEADDR 	0x08000000U
 #define SRAM1_BASEADDR 	0x20000000U
 #define ROM_BASEADDR 	0x1FFF0000U
@@ -323,5 +325,14 @@ typedef struct
  * Clock disable macro for SYSCFG peripheral
  */
 #define SYSCFG_PCLK_DI()	(RCC->APB2ENR &=~ (1 << 14))
+
+#define ENABLE 			1
+#define DISABLE 		0
+#define SET 			ENABLE
+#define RESET 			DISABLE
+#define GPIO_PIN_SET 	SET
+#define GPIO_PIN_RESET 	RESET
+#define FLAG_SET 		SET
+#define FLAG_RESET 		RESET
 
 #endif
