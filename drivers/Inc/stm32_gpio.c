@@ -154,9 +154,3 @@ void GPIO_TogglePin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber)
 {
 	pGPIOx -> ODR ^= (1 << PinNumber);
 }
-
-void GPIO_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EN_DIS);
-void GPIO_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority);
-
-
-//testtttttttttttttttttttttttt
