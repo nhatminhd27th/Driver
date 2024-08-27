@@ -66,11 +66,11 @@ typedef struct
 }GPIO_RegDef_t;
 
 #define GPIOA ((GPIO_RegDef_t *)GPIOA_BASEADDR)
-#define GPIOB ((GPIO_RegDef_t *)GPIOA_BASEADDR)
-#define GPIOC ((GPIO_RegDef_t *)GPIOA_BASEADDR)
-#define GPIOD ((GPIO_RegDef_t *)GPIOA_BASEADDR)
-#define GPIOE ((GPIO_RegDef_t *)GPIOA_BASEADDR)
-#define GPIOH ((GPIO_RegDef_t *)GPIOA_BASEADDR)
+#define GPIOB ((GPIO_RegDef_t *)GPIOB_BASEADDR)
+#define GPIOC ((GPIO_RegDef_t *)GPIOC_BASEADDR)
+#define GPIOD ((GPIO_RegDef_t *)GPIOD_BASEADDR)
+#define GPIOE ((GPIO_RegDef_t *)GPIOE_BASEADDR)
+#define GPIOH ((GPIO_RegDef_t *)GPIOH_BASEADDR)
 
 typedef struct
 {
@@ -334,5 +334,35 @@ typedef struct
 #define GPIO_PIN_RESET 	RESET
 #define FLAG_SET 		SET
 #define FLAG_RESET 		RESET
+
+#define GPIOA_REG_RESET(){\
+	(RCC->AHB1RSTR |= (1<<0));\
+	(RCC->AHB1RSTR &= ~(1<<0));\
+}
+
+#define GPIOB_REG_RESET(){\
+	(RCC->AHB1RSTR |= (1<<1));\
+	(RCC->AHB1RSTR &= ~(1<<1));\
+}
+
+#define GPIOC_REG_RESET(){\
+	(RCC->AHB1RSTR |= (1<<2));\
+	(RCC->AHB1RSTR &= ~(1<<2));\
+}
+
+#define GPIOD_REG_RESET(){\
+	(RCC->AHB1RSTR |= (1<<3));\
+	(RCC->AHB1RSTR &= ~(1<<3));\
+}
+
+#define GPIOE_REG_RESET(){\
+	(RCC->AHB1RSTR |= (1<<4));\
+	(RCC->AHB1RSTR &= ~(1<<4));\
+}
+
+#define GPIOH_REG_RESET(){\
+	(RCC->AHB1RSTR |= (1<<7));\
+	(RCC->AHB1RSTR &= ~(1<<7));\
+}
 
 #endif

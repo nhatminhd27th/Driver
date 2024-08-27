@@ -65,8 +65,8 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EN_DIS);
 void GPIO_Init(GPIO_Handle_t *pGPIOHandle);
 void GPIO_DeInit(GPIO_RegDef_t *pGPIOx);
 
-void GPIO_ReadPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber);
-void GPIO_ReadPort(GPIO_RegDef_t *pGPIOx);
+uint8_t GPIO_ReadPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber);
+uint16_t GPIO_ReadPort(GPIO_RegDef_t *pGPIOx);
 
 void GPIO_WritePin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber, uint8_t Value);
 void GPIO_WritePort(GPIO_RegDef_t *pGPIOx, uint16_t Value);
