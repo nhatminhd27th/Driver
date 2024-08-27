@@ -56,7 +56,10 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 	}
 	else //Interrupt mode
 	{
+		if(pGPIOHandle -> GPIO_PinConfig.GPIO_PinMode == GPIO_MODE_IT_FE)
+		{
 
+		}
 	}
 	//Configure Speed
 	temp = (pGPIOHandle -> GPIO_PinConfig.GPIO_PinSpeed << (2 * pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber));
