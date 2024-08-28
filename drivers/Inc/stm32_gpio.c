@@ -58,6 +58,38 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 	{
 		if(pGPIOHandle -> GPIO_PinConfig.GPIO_PinMode == GPIO_MODE_IT_FE)
 		{
+			EXTI -> FTSR != (1 << pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber);	//Set FTSR bit
+			EXTI -> RTSR &= ~(1 << pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber);	//Clear RTSR bit
+		}
+		else if(pGPIOHandle -> GPIO_PinConfig.GPIO_PinMode == GPIO_MODE_IT_RE)
+		{
+			EXTI -> RTSR != (1 << pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber);
+			EXTI -> FTSR &= ~(1 << pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber);
+		}
+		else if(pGPIOHandle -> GPIO_PinConfig.GPIO_PinMode == GPIO_MODE_IT_FRE)
+		{
+			EXTI -> RTSR != (1 << pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber);
+			EXTI -> FTSR != (1 << pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber);
+		}
+		//SYSCFG_EXTICR
+		uint8_t select_CR = pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber / 4 + 1;
+		uint8_t select_position = pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber % 4;
+		uint8_t select_port = SELECT_PORT(pGPIOHandle->pGPIOx);
+		SYSCFG_PCLK_EN();
+		if(select_CR == 1)
+		{
+
+		}
+		if(select_CR == 2)
+		{
+
+		}
+		if(select_CR == 3)
+		{
+
+		}
+		if(select_CR == 4)
+		{
 
 		}
 	}

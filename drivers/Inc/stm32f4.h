@@ -51,6 +51,8 @@
 #define TIM3_BASEADDR 	(APB1PERIPH_BASEADDR + 0x0400)
 #define TIM2_BASEADDR 	(APB1PERIPH_BASEADDR + 0x0000)
 
+#define SELECT_PORT(x)	((x = GPIOA)? 0: (x = GPIOB)? 1: (x = GPIOC)? 2: (x = GPIOD)? 3: (x = GPIOE)? 4: (x = GPIOH)? 5: 0)
+
 typedef struct
 {
 	volatile uint32_t MODER; //thanh ghi 32 bits nen dung uint32_t
