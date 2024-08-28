@@ -280,7 +280,7 @@ Discarded input sections
  .text.GPIO_PeriClockControl
                 0x00000000       0xbc ./drivers/Inc/stm32_gpio.o
  .text.GPIO_Init
-                0x00000000      0x240 ./drivers/Inc/stm32_gpio.o
+                0x00000000      0x2a4 ./drivers/Inc/stm32_gpio.o
  .text.GPIO_DeInit
                 0x00000000       0xfc ./drivers/Inc/stm32_gpio.o
  .text.GPIO_ReadPin
@@ -293,7 +293,7 @@ Discarded input sections
                 0x00000000       0x1e ./drivers/Inc/stm32_gpio.o
  .text.GPIO_TogglePin
                 0x00000000       0x2a ./drivers/Inc/stm32_gpio.o
- .debug_info    0x00000000      0x633 ./drivers/Inc/stm32_gpio.o
+ .debug_info    0x00000000      0x6a1 ./drivers/Inc/stm32_gpio.o
  .debug_abbrev  0x00000000      0x125 ./drivers/Inc/stm32_gpio.o
  .debug_aranges
                 0x00000000       0x58 ./drivers/Inc/stm32_gpio.o
@@ -307,10 +307,10 @@ Discarded input sections
  .debug_macro   0x00000000      0x103 ./drivers/Inc/stm32_gpio.o
  .debug_macro   0x00000000       0x6a ./drivers/Inc/stm32_gpio.o
  .debug_macro   0x00000000      0x1df ./drivers/Inc/stm32_gpio.o
- .debug_macro   0x00000000      0x2eb ./drivers/Inc/stm32_gpio.o
+ .debug_macro   0x00000000      0x31c ./drivers/Inc/stm32_gpio.o
  .debug_macro   0x00000000       0xc4 ./drivers/Inc/stm32_gpio.o
- .debug_line    0x00000000      0x766 ./drivers/Inc/stm32_gpio.o
- .debug_str     0x00000000     0x5557 ./drivers/Inc/stm32_gpio.o
+ .debug_line    0x00000000      0x7bb ./drivers/Inc/stm32_gpio.o
+ .debug_str     0x00000000     0x55f1 ./drivers/Inc/stm32_gpio.o
  .comment       0x00000000       0x44 ./drivers/Inc/stm32_gpio.o
  .debug_frame   0x00000000      0x150 ./drivers/Inc/stm32_gpio.o
  .ARM.attributes
@@ -830,7 +830,7 @@ LOAD D:/STM32CubeIDE/STM32CubeIDE_1.15.1/STM32CubeIDE/plugins/com.st.stm32cube.i
  .debug_rnglists
                 0x00000013       0x19 ./Startup/startup_stm32f411vetx.o
 
-.debug_macro    0x00000000     0x1264
+.debug_macro    0x00000000     0x1295
  .debug_macro   0x00000000       0x6c ./Src/main.o
  .debug_macro   0x0000006c      0xaba ./Src/main.o
  .debug_macro   0x00000b26       0x22 ./Src/main.o
@@ -839,16 +839,16 @@ LOAD D:/STM32CubeIDE/STM32CubeIDE_1.15.1/STM32CubeIDE/plugins/com.st.stm32cube.i
  .debug_macro   0x00000c27      0x103 ./Src/main.o
  .debug_macro   0x00000d2a       0x6a ./Src/main.o
  .debug_macro   0x00000d94      0x1df ./Src/main.o
- .debug_macro   0x00000f73      0x2f1 ./Src/main.o
+ .debug_macro   0x00000f73      0x322 ./Src/main.o
 
 .debug_line     0x00000000      0x4da
  .debug_line    0x00000000      0x45f ./Src/main.o
  .debug_line    0x0000045f       0x7b ./Startup/startup_stm32f411vetx.o
 
-.debug_str      0x00000000     0x4eef
- .debug_str     0x00000000     0x4eb0 ./Src/main.o
-                               0x500b (size before relaxing)
- .debug_str     0x00004eb0       0x3f ./Startup/startup_stm32f411vetx.o
+.debug_str      0x00000000     0x4f4c
+ .debug_str     0x00000000     0x4f0d ./Src/main.o
+                               0x5068 (size before relaxing)
+ .debug_str     0x00004f0d       0x3f ./Startup/startup_stm32f411vetx.o
                                  0x86 (size before relaxing)
 
 .comment        0x00000000       0x43

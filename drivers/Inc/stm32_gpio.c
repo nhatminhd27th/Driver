@@ -78,20 +78,21 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 		SYSCFG_PCLK_EN();
 		if(select_CR == 1)
 		{
-
+			SYSCFG -> EXTICR1 = (select_port << (4*select_position));
 		}
 		if(select_CR == 2)
 		{
-
+			SYSCFG -> EXTICR2 = (select_port << (4*select_position));
 		}
 		if(select_CR == 3)
 		{
-
+			SYSCFG -> EXTICR3 = (select_port << (4*select_position));
 		}
 		if(select_CR == 4)
 		{
-
+			SYSCFG -> EXTICR4 = (select_port << (4*select_position));
 		}
+		EXTI -> IMR |= (1 << (pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber));
 	}
 	//Configure Speed
 	temp = (pGPIOHandle -> GPIO_PinConfig.GPIO_PinSpeed << (2 * pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber));
@@ -192,3 +193,4 @@ void GPIO_TogglePin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber)
 
 void GPIO_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EN_DIS);
 void GPIO_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority);
+void GPIO_IRQHandling(uint8_t PinNumber);

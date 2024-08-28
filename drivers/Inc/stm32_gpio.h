@@ -75,6 +75,6 @@ void GPIO_TogglePin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber);
 
 void GPIO_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EN_DIS);
 void GPIO_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority);
-
+void GPIO_IRQHandling(uint8_t PinNumber);
 
 #endif /* INC_STM32_GPIO_H_ */

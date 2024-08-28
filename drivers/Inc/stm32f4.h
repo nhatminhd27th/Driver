@@ -367,4 +367,12 @@ typedef struct
 	(RCC->AHB1RSTR &= ~(1<<7));\
 }
 
+#define IRQ_EXTI0 		6
+#define IRQ_EXTI1 		7
+#define IRQ_EXTI2 		8
+#define IRQ_EXTI3 		9
+#define IRQ_EXTI4 		10
+#define IRQ_EXTI9_5		23
+#define IRQ_EXTI15_10	40
+
 #endif
